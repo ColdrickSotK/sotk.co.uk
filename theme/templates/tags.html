@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="header">
+    Tags
+  </div>
+  {% for tag, articles in tags %}
+    <a href="/{{ tag.url }}" class="card-small">
+      <h3>{{ tag }}</h3>
+      <p>{{ articles | length }} article{% if articles|length > 1 %}s{% endif %}</p>
+    </a>
+  {% endfor %}
+{% endblock %}
+

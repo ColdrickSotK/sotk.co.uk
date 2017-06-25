@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="header">
+    Software
+  </div>
+
+  {% for pg in pages %}
+    {% if pg.thing == 'yes' and pg.type == 'software' %}
+      <a class="card" href="/{{ pg.url }}" {% if pg.new_tab %}target="_blank"{% endif %}>
+        <h3>{{ pg.title }}</h3>
+        {{ pg.summary }}
+      </a>
+    {% endif %}
+  {% endfor %}
+
+  <div class="header">
+    Gaming
+  </div>
+
+  {% for pg in pages %}
+    {% if pg.thing == 'yes' and pg.type == 'gaming' %}
+      <a class="card" href="/{{ pg.url }}" {% if pg.new_tab %}target="_blank"{% endif %}>
+        <h3>{{ pg.title }}</h3>
+        {{ pg.summary }}
+      </a>
+    {% endif %}
+  {% endfor %}
+{% endblock %}
+

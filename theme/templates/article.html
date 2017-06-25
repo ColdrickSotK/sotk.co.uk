@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="row">
+    <div class="header">
+      {{ article.title }}
+    </div>
+    <p class="metadata">{{ article.locale_date }} - {{ article.author }}</p>
+  </div>
+
+  <article class="card">
+    {{ article.content }}
+    <div class="row">
+      <p class="metadata small">
+        Category: <a href="/{{ article.category.url }}">{{ article.category }}</a>
+      </p>
+      <p class="metadata small">
+        Tags:
+        {% for tag in article.tags %}
+          <a href="/{{ tag.url }}">{{ tag }}</a>
+        {% endfor %}
+      </p>
+    </div>
+  </article>
+{% endblock %}
+

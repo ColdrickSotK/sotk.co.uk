@@ -1,0 +1,202 @@
+body {
+  background-color: #ddd;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+body a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+p a {
+  color: #579053;
+  transition: all 200ms ease-in-out;
+  border-bottom: 1px dotted #579053;
+}
+p a:hover {
+  border-bottom: 1px solid #579053;
+  box-shadow: 0 -1px 0px #579053 inset;
+}
+
+nav {
+  display: flex;
+  background-color: #4d804a;
+  color: #fff;
+  position: fixed;
+  top: 0px;
+  width: calc(100% - 100px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  padding: 0 50px;
+  z-index: 2000;
+}
+nav a {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 20px;
+  text-align: center;
+  transition: all 200ms ease-in-out;
+}
+nav a:hover, nav a.active {
+  background-color: #579053;
+  box-shadow: 0px -4px 0px #fff inset, 0 0px 20px rgba(0, 0, 0, 0.12);
+}
+nav a:hover {
+  z-index: 2100;
+}
+nav .lead {
+  padding: 20px 0;
+  font-size: 2em;
+  flex-basis: 80%;
+}
+
+.container {
+  margin: 90px 15% 30px 15%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .header {
+  font-size: 2em;
+  flex-basis: 100%;
+  padding: 30px 20px;
+}
+
+.card, .card-small, .card-large, .card-static {
+  padding: 40px;
+  background-color: #fff;
+  flex: 1 1 calc(50% - 100px);
+  margin: 10px;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12);
+  transition: all 200ms ease-in-out;
+  position: relative;
+}
+.card:hover, .card-small:hover, .card-large:hover, .card-static:hover {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+}
+.card p, .card-small p, .card-large p, .card-static p {
+  font-family: "Raleway", sans-serif;
+}
+.card p.metadata, .card-small p.metadata, .card-large p.metadata, .card-static p.metadata {
+  margin: 0;
+}
+.card p:last-of-type, .card-small p:last-of-type, .card-large p:last-of-type, .card-static p:last-of-type {
+  margin-bottom: 0;
+}
+
+.card-small {
+  flex-basis: calc(20% - 100px);
+}
+
+.card-large {
+  flex-basis: calc(100% - 100px);
+}
+
+.card-static:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+a.card::after, a.card-small::after, a.card-large::after, a.card-static::after {
+  content: "...";
+  position: absolute;
+  right: 40px;
+  bottom: 20px;
+  color: transparent;
+  font-size: 3em;
+  transition: all 200ms ease-in-out;
+}
+a.card:hover, a.card-small:hover, a.card-large:hover, a.card-static:hover {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25), 4px 0px 0px 0px #4d804a inset;
+}
+a.card:hover::after, a.card-small:hover::after, a.card-large:hover::after, a.card-static:hover::after {
+  color: #4d804a;
+}
+
+article.card, article.card-small, article.card-large, article.card-static {
+  padding: 40px 80px;
+}
+article.card > p:first-child, article.card-small > p:first-child, article.card-large > p:first-child, article.card-static > p:first-child {
+  font-size: 1.5em;
+}
+article.card > p:last-of-type, article.card-small > p:last-of-type, article.card-large > p:last-of-type, article.card-static > p:last-of-type {
+  margin-bottom: 2em;
+}
+article.card p, article.card-small p, article.card-large p, article.card-static p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+article.card .small, article.card-small .small, article.card-large .small, article.card-static .small {
+  font-size: 0.8em;
+}
+article.card:hover, article.card-small:hover, article.card-large:hover, article.card-static:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12);
+}
+article.card .row p, article.card-small .row p, article.card-large .row p, article.card-static .row p {
+  display: inline;
+}
+
+footer {
+  text-align: center;
+  color: #888;
+}
+footer .links {
+  padding: 20px;
+  background-color: #2b412b;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+footer .links a {
+  color: #fff;
+  border: none;
+}
+footer .links a:hover {
+  box-shadow: 0 -1px 0px #fff inset;
+}
+
+.row {
+  display: flex;
+  flex: 1 0 100%;
+}
+.row .header {
+  flex-basis: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.row .header ~ p {
+  padding: 30px 20px;
+  margin: 0;
+}
+.row p {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.row p:last-child {
+  text-align: right;
+}
+
+h3 {
+  display: inline-block;
+  margin: 0;
+}
+
+span.metadata {
+  display: inline-block;
+  float: right;
+}
+
+.metadata {
+  color: #aaa;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+.hidden {
+  display: none;
+}
+

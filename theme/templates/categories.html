@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="header">
+    Categories
+  </div>
+  {% for category, articles in categories %}
+    <a href="/{{ category.url }}" class="card-small">
+      <h3>{{ category }}</h3>
+      <p>{{ articles | length }} article{% if articles|length > 1 %}s{% endif %}</p>
+    </a>
+  {% endfor %}
+{% endblock %}

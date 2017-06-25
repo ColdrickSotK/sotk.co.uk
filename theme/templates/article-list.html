@@ -1,0 +1,13 @@
+{% for article in articles %}
+  <a href="/{{ article.url }}" class="card-large">
+    <h3>{{ article.title }}</h3>
+    <span class="metadata">{{ article.locale_date }} - {{ article.author }}</span>
+    <p>{{ article.summary }}</p>
+    <p class="metadata small">
+      Category: {{ article.category }}
+    </p>
+    <p class="metadata small">
+      Tags: {% for tag in article.tags %}{{ tag }} {% endfor %}
+    </p>
+  </a>
+{% endfor %}

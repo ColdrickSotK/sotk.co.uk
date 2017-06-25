@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="row">
+    <div class="header">
+      {{ category }}
+    </div>
+    <p class="metadata">{{ articles | length }} article{% if articles|length > 1 %}s{% endif %}</p>
+  </div>
+  {% include "article-list.html" %}
+{% endblock %}
