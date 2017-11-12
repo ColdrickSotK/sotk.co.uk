@@ -1,6 +1,7 @@
 Title: About
 Slug: about
 Index: yes
+Template: blank
 
 <div class="header">
   About SotK

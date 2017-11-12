@@ -1,4 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
-  {{ page.content }}
+  <div class="row">
+    <div class="header">
+      {{ page.title }}
+    </div>
+  </div>
+
+  <article class="card">
+    {{ page.content }}
+    <div class="buttons">
+      {% if page.links is iterable and page.links is not string %}
+        {% for link in page.links %}
+          {% set text, url = link.split(';', 1) %}
+          <a class="button" href="{{ url }}">{{ text }}</a>
+        {% endfor %}
+      {% elif page.links is string %}
+        {% set text, url = page.links.split(';', 1) %}
+        <a class="button" href="{{ url }}">{{ text }}</a>
+      {% endif %}
+    </div>
+  </article>
 {% endblock %}
