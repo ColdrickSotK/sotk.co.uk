@@ -4,6 +4,7 @@ URL: things/yamlui/
 Save_as: things/yamlui/index.html
 Thing: yes
 Type: software
+Links: See the code;https://github.com/ColdrickSotK/yamlui
 Summary: yamlui is an extensible set of declarative UI widgets for use with pygame. It allows (fairly) simple creation of UI layouts by editing YAML files, rather than hardcoding everything.
 
 `yamlui` is a Python library which provides a number of UI widgets
