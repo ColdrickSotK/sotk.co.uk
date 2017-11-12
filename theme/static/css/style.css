@@ -200,3 +200,7 @@ span.metadata {
   display: none;
 }
 
+.highlight {
+  padding: 10px;
+  border-radius: 5px;
+}
