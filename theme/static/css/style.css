@@ -118,14 +118,14 @@ article.card, article.card-small, article.card-large, article.card-static {
   padding: 40px 80px;
 }
 article.card > p:first-child, article.card-small > p:first-child, article.card-large > p:first-child, article.card-static > p:first-child {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 article.card > p:last-of-type, article.card-small > p:last-of-type, article.card-large > p:last-of-type, article.card-static > p:last-of-type {
   margin-bottom: 2em;
 }
 article.card p, article.card-small p, article.card-large p, article.card-static p {
-  font-size: 1.2em;
   line-height: 1.5em;
+  letter-spacing: 0.02rem;
 }
 article.card .small, article.card-small .small, article.card-large .small, article.card-static .small {
   font-size: 0.8em;
